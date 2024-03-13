@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>service_request_list</title>
+</head>
+<body>
+<h1>service_request_list</h1>
+<ul>
+  {% for request in service_requests %}
+    <li><a href="{% url 'service_request_detail' request.pk %}">{{ request }}</a></li>
+  {% endfor %}
+</ul>
+
+
+</body>
+</html>
